@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 3rd Graded Exercise submitted by Charles Oswin A. Dela Cruz of 9Sodium</h2>
+
+    <label for="mealPrice">Meal Price:</label>
+    <input type="number" id="mealPrice" placeholder="Enter meal price" required><br><br>
+
+    <label for="tip">Tip:</label>
+    <input type="number" id="tip" placeholder="Enter tip amount" required><br><br>
+
+    <label for="serviceCharge">Service Charge (%):</label>
+    <input type="number" id="serviceCharge" placeholder="Enter service charge percentage" required><br><br>
+
+    <button onclick="totalMeal()">Accept Input</button>
+
+    <p id="totalCostDisplay"></p>
+
+
+
+    <script>
+        function totalMeal() {
+            // Get input values
+            const mp = parseFloat(document.getElementById('mealPrice').value);
+            const tip = parseFloat(document.getElementById('tip').value);
+            const sc = parseFloat(document.getElementById('serviceCharge').value);
+
+            // Calculate total cost
+            const totalCost = mp + tip + (sc / 100 * mp);
+
+            // Display total cost with two decimal places
+            document.getElementById('totalCostDisplay').innerText = "Total Meal: " + totalCost.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
