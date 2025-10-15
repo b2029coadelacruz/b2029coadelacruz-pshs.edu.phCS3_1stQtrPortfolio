@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="STEM Subjects Website - Chemistry Page">
+  <title>STEM Subjects | Chemistry</title>
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    nav ul { list-style-type: none; padding: 0; }
+    nav li { display: inline; margin-right: 15px; }
+    button { padding: 6px 12px; cursor: pointer; }
+    table, th, td { border: 1px solid black; border-collapse: collapse; padding: 6px; }
+    #chemistry-content { display: none; }
+    footer { margin-top: 40px; font-size: 0.9em; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>STEM Subjects</h1>
+    <h2>Exploring Science, Technology, Engineering, and Mathematics</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><button>Home</button></a></li>
+      <li><button onclick="showContent('chemistry-content')">Chemistry</button></li>
+    </ul>
+  </nav>
+
+  <main id="chemistry-content">
+    <article>
+      <h3>Chemistry: The Central Science</h3>
+
+      <p>
+        Chemistry is the branch of science that studies the composition, structure, and properties of matter. 
+        It connects physics with biology and helps explain how substances interact and change.
+      </p>
+
+      <p>
+        From understanding the air we breathe to the reactions that power our bodies, chemistry is everywhere. 
+        It plays a major role in developing new medicines, energy sources, and materials that make life easier.
+      </p>
+
+      <p>
+        Learning chemistry enhances problem-solving and critical-thinking skills—important abilities not only for scientists, 
+        but also for anyone pursuing a STEM career.
+      </p>
+
+      <figure>
+        <img src="../assets/chemistry_lab.jpg" alt="Chemistry laboratory" width="400">
+        <figcaption>Students conducting experiments in a chemistry lab.</figcaption>
+      </figure>
+
+      <iframe width="400" height="225"
+              src="https://www.youtube.com/embed/FSyAehMdpyI"
+              title="The Nucleus: Crash Course Chemistry #1"
+              allowfullscreen>
+      </iframe>
+
+      <h4>Common Elements and Their Uses</h4>
+      <table>
+        <tr>
+          <th rowspan="2">Element</th>
+          <th colspan="2">Common Applications</th>
+        </tr>
+        <tr>
+          <th>Everyday Use</th>
+          <th>Industrial Use</th>
+        </tr>
+        <tr>
+          <td>Oxygen (O₂)</td>
+          <td>Breathing and combustion</td>
+          <td>Steel production, water treatment</td>
+        </tr>
+        <tr>
+          <td>Hydrogen (H₂)</td>
+          <td>Fuel cells, ammonia production</td>
+          <td>Rocket fuel, refining processes</td>
+        </tr>
+        <tr>
+          <td>Carbon (C)</td>
+          <td>Pencils (graphite), diamonds</td>
+          <td>Steel manufacturing, carbon fibers</td>
+        </tr>
+        <tr>
+          <td>Silicon (Si)</td>
+          <td>Electronics, glass</td>
+          <td>Semiconductors, solar panels</td>
+        </tr>
+        <tr>
+          <td>Sodium (Na)</td>
+          <td>Table salt (NaCl)</td>
+          <td>Chemical manufacturing, soap production</td>
+        </tr>
+      </table>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 STEM Subjects Web Project | All rights reserved.</p>
+    <p><strong>Created by:</strong> Na-13, Dela Cruz</p>
+    <p><strong>References (APA 7th Edition):</strong></p>
+    <ul>
+      <li>CrashCourse. (2013, February 12). <em>The Nucleus: Crash Course Chemistry #1</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=FSyAehMdpyI" target="_blank">https://www.youtube.com/watch?v=FSyAehMdpyI</a></li>
+      <li>Wikimedia Commons. (2024). <em>Chemistry laboratory</em> [Photograph]. Wikimedia Foundation. Retrieved October 15, 2025, from <a href="https://commons.wikimedia.org" target="_blank">https://commons.wikimedia.org</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    function showContent(sectionId) {
+      document.querySelectorAll("main").forEach(section => {
+        section.style.display = "none";
+      });
+      document.getElementById(sectionId).style.display = "block";
+    }
+  </script>
+</body>
+</html>
